@@ -1,7 +1,7 @@
 from airflow import DAG
 import datetime
-import pendulum
-from airflow.operators.bash import BashOperator
+import pendulum # type: ignore
+from airflow.operators.bash import BashOperator # type: ignore
 
 with DAG(
     dag_id="dags_bash_operator",
