@@ -11,12 +11,12 @@ with DAG(
     catchup=False
 ) as dag:
     def select_fruit():
-        fuit = ['APPLE', 'BANANA', 'ORANGE', 'AVOCADO']
+        fruit = ['APPLE','BANANA','ORANGE','AVOCADO']
         rand_int = random.randint(0,3)
         print(fruit[rand_int])
 
     py_t1 = PythonOperator(
-        task_id="py_t1",
+        task_id='py_t1',
         python_callable=select_fruit
     )
 
